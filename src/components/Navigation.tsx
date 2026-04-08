@@ -65,9 +65,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Logo size="md" />
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background shadow-sm">
+        <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-6">
+          <Logo size="md" className="min-w-0 flex-1 md:flex-none" />
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-10">
@@ -143,80 +144,82 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="sm"
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </Button>
-      </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="ml-2 h-9 w-9 flex-none px-0 md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </Button>
+        </div>
+      </nav>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
-          <div className="container mx-auto px-6 py-6 space-y-4">
-            {navigation.main.map((item) => (
-              item.hasDropdown ? (
-              <div key={item.label}>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      to={item.href}
-                      onClick={createSamePageClickHandler(item.href)}
-                      className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
-                    >
-                      {item.label}
-                    </Link>
-                    <button
-                      onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                      className="p-1 text-muted-foreground hover:text-foreground transition-colors duration-300"
-                      aria-label="Untermenü öffnen"
-                    >
-                      <ChevronDown 
-                        className={`h-3 w-3 transition-transform duration-200 ${
-                          isMobileDropdownOpen ? "rotate-180" : ""
-                        }`} 
-                      />
-                    </button>
-                  </div>
-                  
-                  {isMobileDropdownOpen && (
-                    <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
-                      {item.children?.map((child) => (
-                        <Link
-                          key={child.href}
-                          to={child.href}
-                          onClick={createSamePageClickHandler(child.href)}
-                          className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+        <div className="fixed inset-x-0 top-14 z-40 border-b border-border bg-background shadow-lg md:hidden sm:top-16">
+          <div className="mx-auto w-full max-w-7xl px-3 py-5 sm:px-6 sm:py-6">
+            <div className="space-y-4">
+              {navigation.main.map((item) => (
+                item.hasDropdown ? (
+                  <div key={item.label}>
+                    <div className="flex items-center justify-between gap-3">
+                      <Link
+                        to={item.href}
+                        onClick={createSamePageClickHandler(item.href)}
+                        className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                        className="flex h-8 w-8 flex-none items-center justify-center text-muted-foreground hover:text-foreground transition-colors duration-300"
+                        aria-label="Untermenü öffnen"
+                      >
+                        <ChevronDown
+                          className={`h-3 w-3 transition-transform duration-200 ${
+                            isMobileDropdownOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
                     </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  onClick={createSamePageClickHandler(item.href)}
-                  className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
-                >
-                  {item.label}
-                </Link>
-              )
-            ))}
-            
-            {/* Mobile Theme Toggle */}
-            <div className="pt-4 border-t border-border">
-              <ThemeToggle />
+
+                    {isMobileDropdownOpen && (
+                      <div className="mt-3 ml-4 space-y-3 border-l border-border pl-4">
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.href}
+                            to={child.href}
+                            onClick={createSamePageClickHandler(child.href)}
+                            className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={createSamePageClickHandler(item.href)}
+                    className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              ))}
+
+              <div className="border-t border-border pt-4">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
