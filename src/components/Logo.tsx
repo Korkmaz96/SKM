@@ -10,9 +10,9 @@ interface LogoProps {
 const Logo = ({ className = "", showName = true, size = "md" }: LogoProps) => {
   const location = useLocation();
   const sizeClasses = {
-    sm: "h-6 w-6",
-    md: "h-8 w-8",
-    lg: "h-12 w-12",
+    sm: "h-5 w-5 sm:h-6 sm:w-6",
+    md: "h-7 w-7 sm:h-8 sm:w-8",
+    lg: "h-10 w-10 sm:h-12 sm:w-12",
   };
 
   const handleHomeClick = () => {
@@ -22,20 +22,24 @@ const Logo = ({ className = "", showName = true, size = "md" }: LogoProps) => {
   };
 
   return (
-    <Link to="/" onClick={handleHomeClick} className={`flex items-center gap-3 ${className}`}>
+    <Link
+      to="/"
+      onClick={handleHomeClick}
+      className={`flex min-w-0 items-center gap-2 sm:gap-3 ${className}`}
+    >
       {/* Logo Slot - Replace with actual SVG/Image */}
       <div 
-        className={`${sizeClasses[size]} bg-foreground flex items-center justify-center`}
+        className={`${sizeClasses[size]} shrink-0 bg-foreground flex items-center justify-center`}
         aria-label={`${company.name} Logo`}
       >
         {/* Placeholder: Replace with actual logo */}
-        <span className="text-background font-bold text-xs">
+        <span className="text-[10px] font-bold text-background sm:text-xs">
           SKM
         </span>
       </div>
       
       {showName && (
-        <span className="text-minimal text-foreground">
+        <span className="min-w-0 truncate text-[11px] leading-none text-foreground max-[359px]:hidden sm:text-xs md:text-sm">
           {company.name.toUpperCase()}
         </span>
       )}
