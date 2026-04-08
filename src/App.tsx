@@ -14,6 +14,7 @@ import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter basename="/SKM">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/leistungen" element={<Leistungen />} />

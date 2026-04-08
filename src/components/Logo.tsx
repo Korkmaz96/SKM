@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { company } from "@/content/content";
 
 interface LogoProps {
@@ -8,14 +8,21 @@ interface LogoProps {
 }
 
 const Logo = ({ className = "", showName = true, size = "md" }: LogoProps) => {
+  const location = useLocation();
   const sizeClasses = {
     sm: "h-6 w-6",
     md: "h-8 w-8",
     lg: "h-12 w-12",
   };
 
+  const handleHomeClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <Link to="/" className={`flex items-center gap-3 ${className}`}>
+    <Link to="/" onClick={handleHomeClick} className={`flex items-center gap-3 ${className}`}>
       {/* Logo Slot - Replace with actual SVG/Image */}
       <div 
         className={`${sizeClasses[size]} bg-foreground flex items-center justify-center`}

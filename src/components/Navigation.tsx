@@ -6,6 +6,10 @@ import { ChevronDown } from "lucide-react";
 import Logo from "@/components/Logo";
 import { navigation } from "@/content/content";
 
+const scrollToPageTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -53,6 +57,13 @@ const Navigation = () => {
     return location.pathname === href;
   };
 
+  const createSamePageClickHandler = (href: string, callback?: () => void) => () => {
+    if (location.pathname === href) {
+      scrollToPageTop();
+    }
+    callback?.();
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -71,6 +82,7 @@ const Navigation = () => {
               >
                 <Link
                   to={item.href}
+                  onClick={createSamePageClickHandler(item.href)}
                   className={`flex items-center gap-1 text-minimal transition-colors duration-300 ${
                     isActiveRoute(item.href) 
                       ? "text-foreground" 
@@ -94,7 +106,7 @@ const Navigation = () => {
                           <Link
                             key={child.href}
                             to={child.href}
-                            onClick={() => setIsDropdownOpen(false)}
+                            onClick={createSamePageClickHandler(child.href, () => setIsDropdownOpen(false))}
                             className={`block px-4 py-3 text-sm transition-colors duration-200 ${
                               location.pathname === child.href
                                 ? "bg-muted text-foreground"
@@ -113,6 +125,7 @@ const Navigation = () => {
               <Link
                 key={item.label}
                 to={item.href}
+                onClick={createSamePageClickHandler(item.href)}
                 className={`text-minimal transition-colors duration-300 ${
                   isActiveRoute(item.href)
                     ? "text-foreground"
@@ -151,6 +164,7 @@ const Navigation = () => {
                   <div className="flex items-center gap-2">
                     <Link
                       to={item.href}
+                      onClick={createSamePageClickHandler(item.href)}
                       className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
                     >
                       {item.label}
@@ -174,6 +188,7 @@ const Navigation = () => {
                         <Link
                           key={child.href}
                           to={child.href}
+                          onClick={createSamePageClickHandler(child.href)}
                           className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
                         >
                           {child.label}
@@ -186,6 +201,7 @@ const Navigation = () => {
                 <Link
                   key={item.label}
                   to={item.href}
+                  onClick={createSamePageClickHandler(item.href)}
                   className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
                 >
                   {item.label}
