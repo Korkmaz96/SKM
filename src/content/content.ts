@@ -4,7 +4,7 @@ export const company = {
   name: "SKM Management",
   tagline: "Technische Beratung & Sachverständigenleistungen",
   email: "sefa-korkmaz@web.de",
-  phone: "+49163xxx",
+  phone: "+49 162 9383033",
   address: {
     street: "",
     city: "Stuttgart",
@@ -24,7 +24,6 @@ export const navigation = {
         { label: "Corporate Real Estate & Lean FM", href: "/leistungen/corporate-real-estate-lean-fm" },
       ],
     },
-    { label: "Referenzen", href: "/referenzen" },
     { label: "Unternehmen", href: "/unternehmen" },
     { label: "Kontakt", href: "/kontakt" },
   ],
@@ -36,7 +35,6 @@ export const navigation = {
     ],
     unternehmen: [
       { label: "Über uns", href: "/unternehmen" },
-      { label: "Referenzen", href: "/referenzen" },
       { label: "Kontakt", href: "/kontakt" },
     ],
     legal: [
@@ -174,50 +172,75 @@ export const referenzen = {
 export const unternehmen = {
   headline: "Unternehmen",
   subheadline: "Über SKM Management",
-  intro: "Einleitungstext über das Unternehmen",
+  intro: "SKM Management verbindet technische Expertise, Betreiberverantwortung und Corporate Real Estate zu einer klaren, belastbaren Beratungs- und Sachverständigenperspektive für anspruchsvolle Immobilien- und Betreiberstrukturen.",
   inhaber: {
     name: "Sefa Korkmaz",
     title: "Geschäftsführer & Inhaber",
-    shortBio: "Kurzvorstellung des Inhabers, fachlicher Hintergrund und Schwerpunkte.",
+    shortBio: "Ich verbinde praktische Erfahrung aus Bau, Facility Management und technischem Immobilienmanagement mit einem berufsbegleitend aufgebauten akademischen Fundament bis zum Master of Science im Wirtschaftsingenieurwesen mit Fachrichtung Facility Management. Mein Anspruch ist eine sachliche, belastbare Beratung, die technische Themen, Betreiberverantwortung und wirtschaftliche Anforderungen sauber zusammenführt.",
     image: "inhaber-placeholder",
   },
   werdegang: {
     title: "Werdegang",
     stations: [
-      { year: "Seit [Jahr]", role: "Geschäftsführer & Inhaber", company: "SKM Management", description: "Beschreibung der aktuellen Tätigkeit" },
-      { year: "[Jahr] - [Jahr]", role: "Position", company: "Unternehmen", description: "Beschreibung" },
-      { year: "[Jahr] - [Jahr]", role: "Position", company: "Unternehmen", description: "Beschreibung" },
-      { year: "[Jahr] - [Jahr]", role: "Position", company: "Unternehmen", description: "Beschreibung" },
-      { year: "[Jahr]", role: "Studienabschluss / Ausbildung", company: "Hochschule / Institution", description: "Beschreibung" },
+      {
+        year: "Seit 2021",
+        role: "Technischer Immobiliensachverständiger",
+        company: "SKM Management",
+        description: "Nebenberuflicher, projektbezogener Aufbau eines Sachverständigen- und Beratungsbüros mit Fokus auf technische Bewertungen, Gebäudezustand, Betreiberverantwortung und technische Risiken.",
+      },
+      {
+        year: "Seit 2023",
+        role: "Technical Property Manager / Corporate Real Estate Management",
+        company: "VECTOR Informatik",
+        description: "Verantwortung für technisches Immobilienmanagement, Betreiberstrukturen und nachhaltige Portfolioentwicklung im Corporate-Real-Estate-Umfeld eines internationalen Technologieunternehmens.",
+      },
+      {
+        year: "2018 - 2023",
+        role: "Facility Manager / Teamleiter Facility Management",
+        company: "GOLDBECK",
+        description: "Planung, Vergabe und Steuerung von Instandsetzungs-, Umbau- und Modernisierungsmaßnahmen sowie Aufbau und Weiterentwicklung von FM-Strukturen am Standort Stuttgart.",
+      },
+      {
+        year: "2010 - 2018",
+        role: "Account-Manager",
+        company: "BAUHAUS Deutschland",
+        description: "Praxisnahe Begleitung von Sanierungs- und Revitalisierungsvorhaben von der Bedarfsermittlung bis zur Umsetzung mit starkem Fokus auf Abstimmung, Steuerung und Ergebnisqualität.",
+      },
+      {
+        year: "2021 - 2023",
+        role: "Master of Science",
+        company: "Technische Hochschule Mittelhessen",
+        description: "Berufsbegleitender Abschluss im Wirtschaftsingenieurwesen mit Fachrichtung Facility Management als fundierte Ergänzung zur praktischen Laufbahn.",
+      },
     ],
   },
   profil: {
     title: "Unternehmensprofil",
-    content: "Ausführlicher Text über SKM Management, Gründung, Ausrichtung, Werte und Arbeitsphilosophie.",
+    content: "SKM Management steht für eine technische und organisatorische Perspektive auf Immobilien, die Verantwortung nicht nur beschreibt, sondern belastbar strukturiert. Im Mittelpunkt stehen technische Bewertungen, Betreiberverantwortung und Corporate Real Estate Fragestellungen dort, wo Anlagen, Prozesse und wirtschaftliche Entscheidungen zusammenwirken. Die Beratung ist bewusst ruhig, unabhängig und umsetzungsnah angelegt: ohne Übertreibung, ohne Standardphrasen, dafür mit nachvollziehbarer Methodik, Praxisnähe und einem klaren Blick für Risiken, Zustände und Verantwortlichkeiten.",
   },
   sections: {
     positionierung: {
       title: "Positionierung",
-      content: "Text zur Positionierung des Unternehmens",
+      content: "SKM Management positioniert sich als technisches Beratungs- und Sachverständigenbüro an der Schnittstelle von Gebäude, Organisation und Betreiberverantwortung. Der Fokus liegt nicht auf klassischer Verwaltung, sondern auf fundierter Bewertung, klarer Einordnung und belastbaren Handlungsempfehlungen im Corporate-Real-Estate- und Facility-Management-Umfeld.",
     },
     arbeitsweise: {
       title: "Arbeitsweise",
-      content: "Text zur Arbeitsweise",
+      content: "Die Arbeit folgt einem strukturierten, nachvollziehbaren Ansatz: technische und organisatorische Ausgangslage erfassen, Risiken und Verantwortlichkeiten sauber bewerten und daraus praktikable Empfehlungen ableiten. Ziel sind Lösungen, die fachlich belastbar, wirtschaftlich vernünftig und im Betrieb tatsächlich anschlussfähig sind.",
     },
     qualifikation: {
       title: "Qualifikation & Vertrauen",
       points: [
         {
           title: "Technische Fachkompetenz",
-          description: "Fundiertes Know-how in der Bewertung von Gebäuden, technischen Anlagen und Infrastruktur - erworben durch langjährige Praxis in anspruchsvollen Projekten.",
+          description: "Fundiertes Know-how in der Bewertung von Gebäuden, technischen Anlagen und Infrastruktur aus langjähriger Praxis in anspruchsvollen Immobilien- und Betreiberstrukturen.",
         },
         {
           title: "Strukturierte Arbeitsweise",
-          description: "Methodisches, nachvollziehbares Vorgehen in jeder Projektphase - von der Analyse über die Bewertung bis zur dokumentierten Handlungsempfehlung.",
+          description: "Methodisches und nachvollziehbares Vorgehen von der Bestandsaufnahme über die Bewertung bis zur klar dokumentierten Handlungsempfehlung.",
         },
         {
           title: "Unabhängigkeit & Verlässlichkeit",
-          description: "Neutrale, interessenunabhängige Beratung und Bewertung - als verlässlicher Partner für Eigentümer, Betreiber und Investoren.",
+          description: "Neutrale, interessenunabhängige Einordnung mit einem klaren Blick auf Verantwortlichkeiten, Risiken und praktikable Umsetzbarkeit.",
         },
       ],
     },

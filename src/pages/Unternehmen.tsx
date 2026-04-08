@@ -65,7 +65,7 @@ const Unternehmen = () => {
                 <p className="text-minimal text-muted-foreground tracking-wider mb-8">
                   {unternehmen.inhaber.title.toUpperCase()}
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="max-w-2xl text-lg text-muted-foreground leading-relaxed">
                   {unternehmen.inhaber.shortBio}
                 </p>
               </div>
@@ -127,9 +127,14 @@ const Unternehmen = () => {
               {unternehmen.profil.title.toUpperCase()}
             </h3>
             <div className="max-w-3xl">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {unternehmen.profil.content}
-              </p>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>{unternehmen.profil.content}</p>
+                <p>
+                  Die fachliche Basis speist sich aus Stationen in Baupraxis, Facility Management,
+                  Projektsteuerung und technischem Immobilienmanagement. Daraus entsteht ein Profil,
+                  das sowohl operative Realitäten als auch strategische Anforderungen in Unternehmen versteht.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -165,19 +170,21 @@ const Unternehmen = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <h3 className="text-minimal text-muted-foreground mb-12">
+            <h3 className="text-minimal text-muted-foreground mb-12 tracking-widest">
               {unternehmen.sections.qualifikation.title.toUpperCase()}
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="divide-y divide-border border-y border-border bg-background">
               {unternehmen.sections.qualifikation.points.map((point, index) => (
-                <div key={index} className="p-10 border border-border bg-background">
-                  <span className="text-minimal text-muted-foreground/50 font-light tracking-widest">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h4 className="mt-6 text-lg font-medium text-foreground">
-                    {point.title}
-                  </h4>
-                  <p className="mt-3 text-muted-foreground leading-relaxed text-sm">
+                <div
+                  key={index}
+                  className="grid gap-4 px-0 py-8 md:grid-cols-[240px_1fr] md:gap-10"
+                >
+                  <div>
+                    <h4 className="text-lg font-medium text-foreground">
+                      {point.title}
+                    </h4>
+                  </div>
+                  <p className="max-w-3xl text-muted-foreground leading-relaxed">
                     {point.description}
                   </p>
                 </div>

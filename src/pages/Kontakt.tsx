@@ -89,51 +89,74 @@ const Kontakt = () => {
       <section className="pt-32 pb-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 items-start">
               {/* Contact Info */}
-              <div>
-                <h1 className="text-minimal text-muted-foreground mb-4">KONTAKT</h1>
-                <h2 className="text-4xl md:text-6xl font-light text-architectural mb-8">
+              <div className="max-w-2xl">
+                <h1 className="text-minimal text-muted-foreground mb-4 tracking-widest">KONTAKT</h1>
+                <h2 className="text-4xl md:text-6xl font-light text-architectural mb-6">
                   {kontakt.subheadline}
                 </h2>
-                <p className="text-lg text-muted-foreground mb-12">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                   {kontakt.description}
                 </p>
-                
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-minimal text-muted-foreground mb-2">E-MAIL</h3>
-                    <a 
-                      href={`mailto:${company.email}`} 
-                      className="text-xl hover:text-muted-foreground transition-colors duration-300"
-                    >
-                      {company.email}
-                    </a>
+
+                <div className="border-y border-border">
+                  <div className="grid gap-3 py-6 md:grid-cols-[140px_1fr] md:items-start">
+                    <h3 className="text-minimal text-muted-foreground tracking-widest">E-MAIL</h3>
+                    <div>
+                      <a
+                        href={`mailto:${company.email}`}
+                        className="text-xl leading-snug hover:text-muted-foreground transition-colors duration-300 break-all"
+                      >
+                        {company.email}
+                      </a>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                        Für Projektanfragen, Erstgespräche und fachliche Rückfragen.
+                      </p>
+                    </div>
                   </div>
-                  
-                  <div>
-                    <h3 className="text-minimal text-muted-foreground mb-2">TELEFON</h3>
-                    <a 
-                      href={`tel:${company.phone}`} 
-                      className="text-xl hover:text-muted-foreground transition-colors duration-300"
-                    >
-                      {company.phone}
-                    </a>
+
+                  <div className="grid gap-3 border-t border-border py-6 md:grid-cols-[140px_1fr] md:items-start">
+                    <h3 className="text-minimal text-muted-foreground tracking-widest">TELEFON</h3>
+                    <div>
+                      <a
+                        href={`tel:${company.phone.replace(/\s+/g, "")}`}
+                        className="text-xl leading-snug hover:text-muted-foreground transition-colors duration-300"
+                      >
+                        {company.phone}
+                      </a>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                        Direkter Kontakt für die erste Einordnung Ihres Anliegens.
+                      </p>
+                    </div>
                   </div>
-                  
-                  <div>
-                    <h3 className="text-minimal text-muted-foreground mb-2">ADRESSE</h3>
-                    <address className="text-xl not-italic">
-                      {company.address.street}
-                      <br />
-                      {company.address.zip} {company.address.city}
-                    </address>
+
+                  <div className="grid gap-3 border-t border-border py-6 md:grid-cols-[140px_1fr] md:items-start">
+                    <h3 className="text-minimal text-muted-foreground tracking-widest">STANDORT</h3>
+                    <div>
+                      <address className="text-xl not-italic leading-relaxed">
+                        {company.address.city}, Deutschland
+                      </address>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
+                        SKM Management unterstützt Unternehmen und Eigentümer bei technischen Bewertungen,
+                        Betreiberverantwortung und strukturierten Fragestellungen im Corporate Real Estate Umfeld.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
               
               {/* Contact Form */}
-              <div>
+              <div className="border border-border p-8 md:p-10 bg-muted/10">
+                <div className="mb-8">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground mb-3">
+                    Anfrage senden
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Das Kontaktformular bleibt bewusst schlank. Sie erhalten nach Ihrer Anfrage eine zeitnahe Rückmeldung.
+                  </p>
+                </div>
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Label htmlFor="name" className="text-minimal text-muted-foreground">
