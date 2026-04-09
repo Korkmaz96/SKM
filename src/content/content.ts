@@ -3,7 +3,7 @@
 export const company = {
   name: "SKM Management",
   tagline: "Technische Beratung & Sachverständigenleistungen",
-  email: "sefa-korkmaz@web.de",
+  email: "kontakt@skm-management.de",
   phone: "+49 162 9383033",
   address: {
     street: "",
@@ -20,8 +20,8 @@ export const navigation = {
       hasDropdown: true,
       children: [
         { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
-        { label: "Betreiberverantwortung & Organisation", href: "/leistungen/betreiberverantwortung-organisation" },
-        { label: "Corporate Real Estate & Lean FM", href: "/leistungen/corporate-real-estate-lean-fm" },
+        { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
+        { label: "Corporate Real Estate & Facility Management", href: "/leistungen/corporate-real-estate-facility-management" },
       ],
     },
     { label: "Unternehmen", href: "/unternehmen" },
@@ -30,8 +30,8 @@ export const navigation = {
   footer: {
     leistungen: [
       { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
-      { label: "Betreiberverantwortung & Organisation", href: "/leistungen/betreiberverantwortung-organisation" },
-      { label: "Corporate Real Estate & Lean FM", href: "/leistungen/corporate-real-estate-lean-fm" },
+      { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
+      { label: "Corporate Real Estate & Facility Management", href: "/leistungen/corporate-real-estate-facility-management" },
     ],
     unternehmen: [
       { label: "Über uns", href: "/unternehmen" },
@@ -66,11 +66,11 @@ export const services = {
       ],
     },
     {
-      id: "betreiberverantwortung-organisation",
+      id: "betreiberverantwortung-technischer-brandschutz",
       number: "02",
-      title: "Betreiberverantwortung & Organisation",
+      title: "Betreiberverantwortung & technischer Brandschutz",
       shortDescription: "Strukturierte Analyse und Aufbau rechtssicherer Betreiberpflichten-Prozesse.",
-      href: "/leistungen/betreiberverantwortung-organisation",
+      href: "/leistungen/betreiberverantwortung-technischer-brandschutz",
       items: [
         "Analyse und Aufbau von Betreiberpflichten-Strukturen",
         "Prüfung von Verantwortlichkeiten und Prozessen",
@@ -79,11 +79,11 @@ export const services = {
       ],
     },
     {
-      id: "corporate-real-estate-lean-fm",
+      id: "corporate-real-estate-facility-management",
       number: "03",
-      title: "Corporate Real Estate & Lean FM",
+      title: "Corporate Real Estate & Facility Management",
       shortDescription: "Prozess- und Organisationsberatung an der Schnittstelle von Technik und Management.",
-      href: "/leistungen/corporate-real-estate-lean-fm",
+      href: "/leistungen/corporate-real-estate-facility-management",
       items: [
         "Prozess- und Organisationsanalysen im CRE/FM",
         "Lifecycle- und Wirtschaftlichkeitsbetrachtungen",
@@ -98,7 +98,7 @@ export const homepage = {
   hero: {
     headline: "SKM Management",
     subheadline: "Technische Beratung für Immobilien und Anlagen",
-    description: "Sachverständigenleistungen, Betreiberverantwortung und Corporate Real Estate - strukturiert, risikoorientiert, wirtschaftlich.",
+    description: "Technische Bewertung und strukturierte Steuerung von Immobilien mit Fokus auf Betreiberverantwortung, Werterhalt und Risikominimierung.",
   },
   arbeitsweise: {
     headline: "Arbeitsweise",
@@ -176,7 +176,11 @@ export const unternehmen = {
   inhaber: {
     name: "Sefa Korkmaz",
     title: "Geschäftsführer & Inhaber",
-    shortBio: "Ich verbinde praktische Erfahrung aus Bau, Facility Management und technischem Immobilienmanagement mit einem berufsbegleitend aufgebauten akademischen Fundament bis zum Master of Science im Wirtschaftsingenieurwesen mit Fachrichtung Facility Management. Mein Anspruch ist eine sachliche, belastbare Beratung, die technische Themen, Betreiberverantwortung und wirtschaftliche Anforderungen sauber zusammenführt.",
+    bio: [
+      "Mein beruflicher Weg begann nicht im Büro, sondern auf der Baustelle. Mit einer Ausbildung im Beton- und Stahlbetonbau habe ich das technische Fundament gelegt, das bis heute mein Verständnis für Immobilien prägt: realistisch, praxisnah und lösungsorientiert.",
+      "Über Stationen im Facility Management und technischen Property Management übernahm ich zunehmend Verantwortung für komplexe Immobilienstrukturen - bis hin zum technischen Management von Immobilienportfolios eines internationalen Unternehmens im dreistelligen Millionenbereich. Berufsbegleitend habe ich den Master of Science im Wirtschaftsingenieurwesen mit Fachrichtung Facility Management abgeschlossen.",
+      "Mein Anspruch ist eine sachliche, belastbare Beratung, die technische Themen, Betreiberverantwortung und wirtschaftliche Anforderungen sauber zusammenführt.",
+    ],
     image: "inhaber-placeholder",
   },
   werdegang: {
@@ -216,7 +220,12 @@ export const unternehmen = {
   },
   profil: {
     title: "Unternehmensprofil",
-    content: "SKM Management steht für eine technische und organisatorische Perspektive auf Immobilien, die Verantwortung nicht nur beschreibt, sondern belastbar strukturiert. Im Mittelpunkt stehen technische Bewertungen, Betreiberverantwortung und Corporate Real Estate Fragestellungen dort, wo Anlagen, Prozesse und wirtschaftliche Entscheidungen zusammenwirken. Die Beratung ist bewusst ruhig, unabhängig und umsetzungsnah angelegt: ohne Übertreibung, ohne Standardphrasen, dafür mit nachvollziehbarer Methodik, Praxisnähe und einem klaren Blick für Risiken, Zustände und Verantwortlichkeiten.",
+    paragraphs: [
+      "SKM Management steht für eine technische und organisatorische Perspektive auf Immobilien, die Verantwortung nicht nur beschreibt, sondern belastbar strukturiert. Im Mittelpunkt stehen technische Bewertungen, Betreiberverantwortung und Corporate Real Estate Fragestellungen dort, wo Anlagen, Prozesse und wirtschaftliche Entscheidungen zusammenwirken. Die Beratung ist bewusst ruhig, unabhängig und umsetzungsnah angelegt: ohne Übertreibung, ohne Standardphrasen, dafür mit nachvollziehbarer Methodik, Praxisnähe und einem klaren Blick für Risiken, Zustände und Verantwortlichkeiten.",
+      "Die fachliche Basis speist sich aus Stationen in Baupraxis, Facility Management, Projektsteuerung und technischem Immobilienmanagement. Daraus entsteht ein Profil, das sowohl operative Realitäten als auch strategische Anforderungen in Unternehmen versteht - an der Schnittstelle von Technik, Organisation und Immobilienwirtschaft. Ziel ist es, Sicherheit zu schaffen, Werte zu erhalten und fundierte Entscheidungen zu ermöglichen.",
+    ],
+    focusLine: "",
+    closing: "",
   },
   sections: {
     positionierung: {
@@ -255,7 +264,7 @@ export const kontakt = {
     nameLabel: "Name",
     namePlaceholder: "Ihr Name",
     emailLabel: "E-Mail",
-    emailPlaceholder: "ihre.email@beispiel.de",
+    emailPlaceholder: "kontakt@skm-management.de",
     messageLabel: "Nachricht",
     messagePlaceholder: "Ihre Nachricht an uns...",
     submitLabel: "Nachricht senden",

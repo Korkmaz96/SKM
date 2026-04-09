@@ -66,7 +66,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background shadow-sm">
+      <nav className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-md shadow-sm">
         <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-6">
           <Logo size="md" className="min-w-0 flex-1 md:flex-none" />
         
@@ -158,7 +158,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-x-0 top-14 z-40 border-b border-border bg-background shadow-lg md:hidden sm:top-16">
+        <div className="fixed inset-x-0 top-14 z-40 border-b border-border/80 bg-background/80 backdrop-blur-md shadow-lg md:hidden sm:top-16">
           <div className="mx-auto w-full max-w-7xl px-3 py-5 sm:px-6 sm:py-6">
             <div className="space-y-4">
               {navigation.main.map((item) => (

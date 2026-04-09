@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Main Footer Content */}
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Company Info */}
-            {/* Company Info (LEFT) – im SoftwareAtelier-Style */}
+            {/* Company Info (LEFT) - im SoftwareAtelier-Style */}
             <div className="md:col-span-1">
               <Link to="/" onClick={handleHomeClick} className="flex items-center gap-2 mb-4">
                 <div className="w-9 h-9 rounded-lg bg-transparent border border-transparent flex items-center justify-center">

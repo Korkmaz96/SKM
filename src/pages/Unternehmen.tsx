@@ -51,7 +51,7 @@ const Unternehmen = () => {
                 <div className="aspect-[3/4] bg-muted overflow-hidden">
                   <img
                     src={inhaberImage}
-                    alt={`${unternehmen.inhaber.name} – ${unternehmen.inhaber.title}`}
+                    alt={`${unternehmen.inhaber.name} - ${unternehmen.inhaber.title}`}
                     className="w-full h-full object-cover grayscale"
                   />
                 </div>
@@ -65,9 +65,11 @@ const Unternehmen = () => {
                 <p className="text-minimal text-muted-foreground tracking-wider mb-8">
                   {unternehmen.inhaber.title.toUpperCase()}
                 </p>
-                <p className="max-w-2xl text-lg text-muted-foreground leading-relaxed">
-                  {unternehmen.inhaber.shortBio}
-                </p>
+                <div className="max-w-2xl space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  {unternehmen.inhaber.bio.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -86,7 +88,7 @@ const Unternehmen = () => {
               {unternehmen.werdegang.stations.map((station, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-[120px_1fr] md:grid-cols-[200px_1fr] gap-6 md:gap-10 relative"
+                  className="relative grid min-w-0 grid-cols-[120px_minmax(0,1fr)] gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10"
                 >
                   {/* Timeline line */}
                   {index < unternehmen.werdegang.stations.length - 1 && (
@@ -101,14 +103,14 @@ const Unternehmen = () => {
                   </div>
 
                   {/* Content */}
-                  <div className={`pb-12 ${index === unternehmen.werdegang.stations.length - 1 ? "pb-0" : ""}`}>
-                    <h4 className="text-foreground font-medium mb-1">
+                  <div className={`min-w-0 pb-12 ${index === unternehmen.werdegang.stations.length - 1 ? "pb-0" : ""}`}>
+                    <h4 className="mb-1 break-words text-foreground font-medium">
                       {station.role}
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
+                    <p className="mb-2 break-words text-sm text-muted-foreground">
                       {station.company}
                     </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="break-words text-sm leading-relaxed text-muted-foreground">
                       {station.description}
                     </p>
                   </div>
@@ -128,19 +130,22 @@ const Unternehmen = () => {
             </h3>
             <div className="max-w-3xl">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>{unternehmen.profil.content}</p>
-                <p>
-                  Die fachliche Basis speist sich aus Stationen in Baupraxis, Facility Management,
-                  Projektsteuerung und technischem Immobilienmanagement. Daraus entsteht ein Profil,
-                  das sowohl operative Realitäten als auch strategische Anforderungen in Unternehmen versteht.
-                </p>
+                {unternehmen.profil.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                {unternehmen.profil.focusLine && (
+                  <p className="pt-2 italic text-foreground/80">
+                    {unternehmen.profil.focusLine}
+                  </p>
+                )}
+                {unternehmen.profil.closing && <p>{unternehmen.profil.closing}</p>}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Positionierung & Arbeitsweise – UNVERÄNDERT */}
+      {/* Positionierung & Arbeitsweise - UNVERÄNDERT */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">

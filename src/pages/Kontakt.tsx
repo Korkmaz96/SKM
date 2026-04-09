@@ -54,7 +54,7 @@ const Kontakt = () => {
     
     setIsSubmitting(true);
     
-    // [FEHLT] – API-Endpoint für Formular-Übermittlung
+    // [FEHLT] - API-Endpoint für Formular-Übermittlung
     // Mock submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
@@ -249,7 +249,7 @@ const Kontakt = () => {
                     </div>
                   </div>
                   
-                  {/* [FEHLT] – Spam-Schutz (z.B. reCAPTCHA oder Honeypot) */}
+                  {/* [FEHLT] - Spam-Schutz (z.B. reCAPTCHA oder Honeypot) */}
                   
                   <Button
                     type="submit"
