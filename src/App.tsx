@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 import Leistungen from "./pages/Leistungen";
 import Sachverstaendigenleistungen from "./pages/Sachverstaendigenleistungen";
@@ -29,8 +29,16 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/leistungen" element={<Leistungen />} />
           <Route path="/leistungen/sachverstaendigenleistungen" element={<Sachverstaendigenleistungen />} />
-          <Route path="/leistungen/betreiberverantwortung-organisation" element={<BetreiberverantwortungOrganisation />} />
-          <Route path="/leistungen/corporate-real-estate-lean-fm" element={<CorporateRealEstateLeanFM />} />
+          <Route path="/leistungen/betreiberverantwortung-technischer-brandschutz" element={<BetreiberverantwortungOrganisation />} />
+          <Route path="/leistungen/corporate-real-estate-facility-management" element={<CorporateRealEstateLeanFM />} />
+          <Route
+            path="/leistungen/betreiberverantwortung-organisation"
+            element={<Navigate to="/leistungen/betreiberverantwortung-technischer-brandschutz" replace />}
+          />
+          <Route
+            path="/leistungen/corporate-real-estate-lean-fm"
+            element={<Navigate to="/leistungen/corporate-real-estate-facility-management" replace />}
+          />
           <Route path="/referenzen" element={<Referenzen />} />
           <Route path="/unternehmen" element={<Unternehmen />} />
           <Route path="/kontakt" element={<Kontakt />} />
