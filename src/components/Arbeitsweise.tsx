@@ -20,7 +20,7 @@ const Arbeitsweise = () => {
             </div>
             
             <div className="space-y-8">
-              <h4 className="text-minimal text-muted-foreground mb-6">PRINZIPIEN</h4>
+              <h4 className="text-minimal text-muted-foreground mb-6"></h4>
               <div className="space-y-6">
                 {homepage.arbeitsweise.principles.map((principle, index) => (
                   <div key={index} className="border-l-2 border-foreground pl-6">

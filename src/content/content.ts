@@ -48,12 +48,12 @@ export const services = {
   overview: {
     headline: "Leistungen",
     subheadline: "Unsere Kernkompetenzen",
-    intro: "Einleitungstext zur Leistungsübersicht",
+    intro: "Risiken minimieren und Werte sichern. SKM unterstützt Unternehmen mit unabhängigen Analysen, strukturiertem Brandschutz und Lean-Management-Methoden bei der zukunftssicheren Ausrichtung ihrer Immobilien.",
   },
   clusters: [
     {
       id: "sachverstaendigenleistungen",
-      number: "01",
+      number: "",
       title: "Sachverständigenleistungen",
       shortDescription: "Technische Bewertungen, Gutachten und unabhängige Analysen für Gebäude und Anlagen.",
       href: "/leistungen/sachverstaendigenleistungen",
@@ -67,7 +67,7 @@ export const services = {
     },
     {
       id: "betreiberverantwortung-technischer-brandschutz",
-      number: "02",
+      number: "",
       title: "Betreiberverantwortung & technischer Brandschutz",
       shortDescription: "Strukturierte Analyse und Aufbau rechtssicherer Betreiberpflichten-Prozesse.",
       href: "/leistungen/betreiberverantwortung-technischer-brandschutz",
@@ -80,7 +80,7 @@ export const services = {
     },
     {
       id: "corporate-real-estate-facility-management",
-      number: "03",
+      number: "",
       title: "Corporate Real Estate & Facility Management",
       shortDescription: "Prozess- und Organisationsberatung an der Schnittstelle von Technik und Management.",
       href: "/leistungen/corporate-real-estate-facility-management",
@@ -101,7 +101,7 @@ export const homepage = {
     description: "Technische Bewertung und strukturierte Steuerung von Immobilien mit Fokus auf Betreiberverantwortung, Werterhalt und Risikominimierung.",
   },
   arbeitsweise: {
-    headline: "Arbeitsweise",
+    headline: "",
     subheadline: "Unsere Philosophie",
     description: "Wir verbinden technische Expertise mit strukturiertem Vorgehen. Unser Fokus liegt auf risikoorientierten, wirtschaftlichen und rechtssicheren Lösungen.",
     principles: [
@@ -277,10 +277,133 @@ export const kontakt = {
 export const legal = {
   impressum: {
     headline: "Impressum",
-    content: "Impressumsangaben gemäß § 5 TMG",
+    content: `Impressum
+
+Sefa Korkmaz
+Beratung und Sachverständigenleistungen im Bereich Corporate Real Estate, Facility Management und technischer Brandschutz.
+Burgfelderstraße.2
+70567 Stuttgart
+
+Kontakt
+Telefon: +49 162 9383033
+E-Mail: kontakt@skm-management.de
+
+Verbraucherstreitbeilegung/Universalschlichtungsstelle
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+Quelle:
+https://www.e-recht24.de`,
   },
   datenschutz: {
     headline: "Datenschutzerklärung",
-    content: "Datenschutzerklärung gemäß DSGVO",
+    content: `Datenschutzerklärung
+
+1. Datenschutz auf einen Blick
+Allgemeine Hinweise
+
+Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+
+Datenerfassung auf dieser Website
+
+Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten, zum Beispiel technische Daten und Server-Logs. Weitere Daten werden verarbeitet, wenn Sie uns diese aktiv mitteilen, zum Beispiel per Kontaktformular, per E-Mail oder telefonisch.
+
+Diese Website nutzt kein Newsletter-System, keine Terminbuchung und keine Werbe- oder Tracking-Tools.
+
+Ihre Rechte
+
+Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem das Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Zudem können Sie - soweit die gesetzlichen Voraussetzungen vorliegen - die Einschränkung der Verarbeitung verlangen und Widerspruch gegen bestimmte Verarbeitungen einlegen. Ihnen steht außerdem ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+
+2. Hinweis zur verantwortlichen Stelle
+
+Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+
+Sefa Korkmaz
+Burgfelderstraße.2
+70567 Stuttgart
+Telefon: +49 162 9383033
+E-Mail: kontakt@skm-management.de
+
+Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+
+3. Hosting und Server-Logs
+
+Wir hosten die Inhalte dieser Website bei:
+
+GitHub Pages
+GitHub, Inc., USA
+
+Beim Aufruf der Website können durch den Hoster Server-Logfiles verarbeitet werden, zum Beispiel IP-Adresse, Datum und Uhrzeit des Zugriffs, angeforderte Seite oder Datei, Browsertyp, Betriebssystem und Referrer-URL. Diese Daten werden in der Regel benötigt, um den sicheren und stabilen Betrieb der Website zu gewährleisten.
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren, stabilen und zuverlässigen Bereitstellung dieser Website.
+
+4. Kontaktaufnahme
+Kontaktformular
+
+Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular einschließlich der von Ihnen dort angegebenen Kontaktdaten zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen verarbeitet.
+
+Für die technische Abwicklung und Übermittlung von Kontaktformularanfragen nutzen wir den Dienst Form.taxi.
+
+Anbieter von Form.taxi ist:
+
+wrkt*biz Reinhard Söllradl
+4070 Eferding
+Österreich
+E-Mail: support@form.taxi
+
+Die von Ihnen im Kontaktformular eingegebenen Daten werden an Form.taxi übermittelt, dort verarbeitet und zur Zustellung Ihrer Nachricht an uns verwendet. Hierzu können insbesondere folgende Daten verarbeitet werden:
+
+Name, E-Mail-Adresse, Telefonnummer, Inhalt der Nachricht, Zeitpunkt der Übermittlung sowie technische Daten wie IP-Adresse, Browsertyp, Domain der Website und Zeitpunkt des Zugriffs.
+
+Form.taxi kann die Inhalte von Formularsendungen für eine begrenzte Dauer speichern, um die Formularübermittlung technisch bereitzustellen und eine zuverlässige Zustellung zu ermöglichen. Nach Angaben des Anbieters erfolgt die Verarbeitung und Speicherung innerhalb der Europäischen Union.
+
+Soweit im Kontaktformular Spam-Schutz-, Captcha-, Honeypot- oder Filterfunktionen eingesetzt werden, können hierfür zusätzliche technische Daten verarbeitet werden, um missbräuchliche oder automatisierte Formularübermittlungen zu erkennen und zu verhindern.
+
+Rechtsgrundlage für die Verarbeitung Ihrer Anfrage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist. In allen übrigen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der effektiven Bearbeitung der an uns gerichteten Anfragen sowie im Schutz des Kontaktformulars vor Missbrauch und Spam.
+
+Kontakt per E-Mail oder Telefon
+
+Wenn Sie uns per E-Mail oder telefonisch kontaktieren, wird Ihre Anfrage einschließlich der daraus hervorgehenden personenbezogenen Daten, zum Beispiel Name, Kontaktdaten und Inhalt der Anfrage, zum Zwecke der Bearbeitung Ihrer Anfrage verarbeitet.
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist. In allen übrigen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+
+5. Speicherdauer
+
+Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
+
+Kontaktanfragen speichern wir in der Regel für 730 Tage, also 24 Monate, beziehungsweise so lange, wie es zur Bearbeitung erforderlich ist. Anschließend löschen wir diese Daten, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen, zum Beispiel bei geschäftlicher Korrespondenz oder steuerrelevanten Unterlagen.
+
+6. Empfänger von personenbezogenen Daten
+
+Eine Weitergabe Ihrer personenbezogenen Daten erfolgt nur, soweit dies zur Bereitstellung dieser Website oder zur Bearbeitung Ihrer Anfrage erforderlich ist.
+
+Dabei können folgende Kategorien von Empfängern eingesetzt werden:
+
+Hosting und Website-Auslieferung: GitHub Pages, GitHub, Inc., USA
+DNS, Reverse Proxy oder CDN, je nach technischer Konfiguration: Cloudflare, Inc., USA
+E-Mail-Weiterleitung und E-Mail-Empfang: Cloudflare Email Routing und Google/Gmail, USA
+Kontaktformular-Abwicklung und Formularübermittlung: Form.taxi, wrkt*biz Reinhard Söllradl, Österreich
+Spam-Schutz und Missbrauchsprävention im Rahmen des Kontaktformulars: Form.taxi beziehungsweise die dort eingesetzten technischen Schutzmechanismen
+
+Eine Übermittlung an weitere Dritte erfolgt nur, wenn hierfür eine gesetzliche Grundlage besteht, Sie eingewilligt haben oder dies zur Bearbeitung Ihrer Anfrage beziehungsweise zur Vertragserfüllung erforderlich ist.
+
+7. Ihre Rechte
+
+Sie haben nach Maßgabe der gesetzlichen Vorschriften insbesondere folgende Rechte:
+
+Auskunft über Ihre gespeicherten personenbezogenen Daten gemäß Art. 15 DSGVO
+Berichtigung unrichtiger personenbezogener Daten gemäß Art. 16 DSGVO
+Löschung personenbezogener Daten gemäß Art. 17 DSGVO
+Einschränkung der Verarbeitung gemäß Art. 18 DSGVO
+Datenübertragbarkeit gemäß Art. 20 DSGVO
+Widerspruch gegen bestimmte Verarbeitungen gemäß Art. 21 DSGVO
+Beschwerde bei einer Aufsichtsbehörde gemäß Art. 77 DSGVO
+
+Zur Ausübung Ihrer Rechte können Sie sich jederzeit an die oben genannte verantwortliche Stelle wenden.
+
+8. Sicherheit
+
+Wir treffen geeignete technische und organisatorische Maßnahmen, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust, Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen.
+
+Die Übertragung dieser Website erfolgt verschlüsselt über HTTPS. Sie erkennen eine verschlüsselte Verbindung daran, dass die Adresszeile des Browsers mit „https://“ beginnt und in der Regel ein Schloss-Symbol angezeigt wird.`,
   },
 };

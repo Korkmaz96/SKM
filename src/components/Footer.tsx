@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { company, navigation } from "@/content/content";
+import Logo from "@/components/Logo";
 
 const scrollToPageTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -8,12 +9,6 @@ const scrollToPageTop = () => {
 
 const Footer = () => {
   const location = useLocation();
-
-  const handleHomeClick = () => {
-    if (location.pathname === "/") {
-      scrollToPageTop();
-    }
-  };
 
   const createSamePageClickHandler = (href: string) => () => {
     if (location.pathname === href) {
@@ -30,17 +25,12 @@ const Footer = () => {
             {/* Company Info */}
             {/* Company Info (LEFT) - im SoftwareAtelier-Style */}
             <div className="md:col-span-1">
-              <Link to="/" onClick={handleHomeClick} className="flex items-center gap-2 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-transparent border border-transparent flex items-center justify-center">
-                  <div className="w-9 h-9 bg-background flex items-center justify-center">
-                    <span className="text-foreground font-bold text-xs">SKM</span>
-                  </div>
-                </div>
-
-                <span className="text-lg font-semibold text-background">
-                  {company.name}
-                </span>
-              </Link>
+              <Logo
+                className="mb-4"
+                size="md"
+                uppercaseName={false}
+                nameClassName="text-lg font-semibold text-background"
+              />
 
               <p className="text-sm text-background/70 mb-4 max-w-xs">
                 {company.tagline}
