@@ -1,3 +1,5 @@
+import heroBetreiber from "@/assets/hero-betreiber.png";
+import introBetreiberBrandschutz from "@/assets/intro-betreiber-brandschutz.png";
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const BetreiberverantwortungOrganisation = () => {
@@ -8,7 +10,7 @@ const BetreiberverantwortungOrganisation = () => {
       eyebrow="BETREIBERVERANTWORTUNG & TECHNISCHER BRANDSCHUTZ"
       heroHeadline="Betreiberpflichten und technischer Brandschutz müssen organisatorisch tragfähig umgesetzt sein."
       heroSubline="SKM Management strukturiert Verantwortlichkeiten, Prüfprozesse und Dokumentationspflichten so, dass technische Betreiberstrukturen nachvollziehbar, belastbar und haftungssicherer werden."
-      heroImage="/src/assets/hero-betreiber.png"
+      heroImage={heroBetreiber}
       heroImageAlt="Technische Begehung zur Betreiberverantwortung und zum betrieblichen Brandschutz"
       breakStatement="Verantwortung klar zuordnen. Risiken früh sichtbar machen. Technische Governance belastbar aufsetzen."
       breakSubtext="SKM verbindet Betreiberverantwortung mit zertifiziertem technischem Brandschutz und schafft nachvollziehbare Organisations- und Berichtsgrundlagen."
@@ -18,7 +20,7 @@ const BetreiberverantwortungOrganisation = () => {
         "Der Anspruch ist nicht abstrakte Regelkunde, sondern eine belastbare Übersetzung von Verantwortung in klare Aufgaben, Zustandsbilder und umsetzbare Maßnahmen.",
         "Besondere Stärke ist die Verbindung aus Betreiberverantwortung und zertifiziertem technischem Brandschutz. Damit entsteht ein Leistungsprofil, das nicht nur Risiken benennt, sondern Verantwortlichkeiten konkretisiert, Begehungen fachlich fundiert begleitet und Berichte liefert, die intern wie extern anschlussfähig sind.",
       ]}
-      introImage="/src/assets/intro-betreiber-brandschutz.png"
+      introImage={introBetreiberBrandschutz}
       introImageAlt="Dokumentation und technische Prüfung im Kontext von Betreiberpflichten und Brandschutz"
       trustItems={[
         "Personenzertifizierter betrieblicher Brandschutzbeauftragter durch den TÜV Rheinland auf Basis DIN EN ISO/IEC 17024.",

@@ -1,3 +1,5 @@
+import heroCreFm from "@/assets/hero-cre-fm.png";
+import introCreFm from "@/assets/intro-cre-fm1.png";
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const CorporateRealEstateLeanFM = () => {
@@ -8,7 +10,7 @@ const CorporateRealEstateLeanFM = () => {
       eyebrow="CORPORATE REAL ESTATE & FACILITY MANAGEMENT"
       heroHeadline="Technische Immobilienprozesse müssen wirtschaftlich, transparent und umsetzbar steuerbar sein."
       heroSubline="SKM Management verbindet technische Tiefe mit realer Corporate-Real-Estate- und Facility-Management-Erfahrung und schafft belastbare Entscheidungsgrundlagen für Bestand, Betrieb und Investitionen."
-      heroImage="/src/assets/hero-cre-fm.png"
+      heroImage={heroCreFm}
       heroImageAlt="Technische Steuerung von Immobilienprozessen im Corporate Real Estate und Facility Management"
       breakStatement="Bestand steuern. Maßnahmen priorisieren. Schnittstellen zwischen Technik, Betrieb und Management belastbar führen."
       breakSubtext="SKM übersetzt technische Handlungsbedarfe, Dienstleistersteuerung und Modernisierungsfragen in tragfähige Prozesse und klare Entscheidungslogiken."
@@ -18,7 +20,7 @@ const CorporateRealEstateLeanFM = () => {
         "Grundlage ist praktische Erfahrung aus dem technischen Management komplexer Portfolios im Unternehmenskontext mit Blick auf Werterhalt, Effizienz und belastbare Betreiberstrukturen.",
         "Die Beratung ist bewusst nah an der Realität des Bestands: Technische Handlungsbedarfe müssen priorisiert, Ausschreibungen sauber aufgesetzt, Dienstleister wirksam gesteuert und Maßnahmen wirtschaftlich eingeordnet werden.",
       ]}
-      introImage="/src/assets/intro-cre-fm1.png"
+      introImage={introCreFm}
       introImageAlt="Bestandsimmobilie und technische Bewirtschaftung im Corporate Real Estate Umfeld"
       trustItems={[
         "Seit September 2023: Technical Property Manager / Corporate Real Estate Management bei VECTOR Informatik.",
