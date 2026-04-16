@@ -1,3 +1,5 @@
+import heroSvLeistungen from "@/assets/hero-sv-leistungen.png";
+import introSvLeistungen from "@/assets/intro-sv-leistungen.png";
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
 const Sachverstaendigenleistungen = () => {
@@ -9,7 +11,7 @@ const Sachverstaendigenleistungen = () => {
       heroHeadline="Technische Sachverhalte müssen belastbar bewertet sein."
       heroSubline="Technisch fundierte Bewertungen und fachliche Stellungnahmen für Gebäude, Anlagen und Immobilienprozesse."
       // TODO: Replace with real image – see briefs/06-bildstrategie.md
-      heroImage="/src/assets/hero-sv-leistungen.png"
+      heroImage={heroSvLeistungen}
       heroImageAlt="Begehung eines Bestandsgebäudes – technische Zustandsbewertung"
       breakStatement="Objektive technische Einordnung. Belastbare Entscheidungsgrundlagen."
       breakSubtext="SKM verdichtet Befunde, Zustandsbilder und Dokumentation zu nachvollziehbaren Bewertungsgrundlagen."
@@ -20,7 +22,7 @@ const Sachverstaendigenleistungen = () => {
         "Bewertet werden Gebäudezustände, technische Anlagen und kritische Schnittstellen im Bestand ebenso wie Bauschäden, Wasserschäden, Korrosion oder unklare technische Dokumentationen.",
       ]}
       // TODO: Replace with real image – see briefs/06-bildstrategie.md
-      introImage="/src/assets/intro-sv-leistungen.png"
+      introImage={introSvLeistungen}
       introImageAlt="Technische Anlage im Bestandsgebäude – Detailaufnahme"
       trustItems={[
         "Baupraktischer Hintergrund seit 2003 (Beton- und Stahlbetonbau)",
