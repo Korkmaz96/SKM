@@ -7,9 +7,9 @@ const CorporateRealEstateLeanFM = () => {
     <ServiceDetailPage
       number="03"
       title="Corporate Real Estate & Facility Management | SKM Management"
-      eyebrow="CORPORATE REAL ESTATE & FACILITY MANAGEMENT"
-      heroHeadline="Technische Immobilienprozesse müssen wirtschaftlich, transparent und umsetzbar steuerbar sein."
-      heroSubline="SKM Management verbindet technische Tiefe mit realer Corporate-Real-Estate- und Facility-Management-Erfahrung und schafft belastbare Entscheidungsgrundlagen für Bestand, Betrieb und Investitionen."
+      eyebrow="TECHNISCHE IMMOBILIENBEWERTUNG & CORPORATE REAL ESTATE"
+      heroHeadline="Technische Immobilienentscheidungen erfordern belastbare Grundlagen."
+      heroSubline="SKM Management verbindet technische Expertise mit Erfahrung im Corporate Real Estate und schafft klare Bewertungen für Bestand, Risiken und Investitionen."
       heroImage={heroCreFm}
       heroImageAlt="Technische Steuerung von Immobilienprozessen im Corporate Real Estate und Facility Management"
       breakStatement="Bestand steuern. Maßnahmen priorisieren. Schnittstellen zwischen Technik, Betrieb und Management belastbar führen."
@@ -23,9 +23,9 @@ const CorporateRealEstateLeanFM = () => {
       introImage={introCreFm}
       introImageAlt="Bestandsimmobilie und technische Bewirtschaftung im Corporate Real Estate Umfeld"
       trustItems={[
-        "Seit September 2023: Technical Property Manager / Corporate Real Estate Management bei VECTOR Informatik.",
+        // "Seit September 2023: Technical Property Manager / Corporate Real Estate Management bei VECTOR Informatik.",
         "Praxis in der Steuerung technischer Immobilienprozesse für eigengenutzte sowie angemietete und vermietete Unternehmensstandorte.",
-        "M.Sc. Wirtschaftsingenieurwesen mit Fachrichtung Facility Management sowie weiterführende FM-Qualifikationen bis hin zum zertifizierten Facility Manager.",
+        // "M.Sc. Wirtschaftsingenieurwesen mit Fachrichtung Facility Management sowie weiterführende FM-Qualifikationen bis hin zum zertifizierten Facility Manager.",
       ]}
       tabs={[
         {
@@ -74,7 +74,7 @@ const CorporateRealEstateLeanFM = () => {
         },
       ]}
       ctaHeadline="Technische Immobiliensteuerung braucht belastbare Entscheidungsgrundlagen."
-      ctaSubtext="Wir klären gern, wie SKM Ihr Corporate-Real-Estate- oder Facility-Management-Umfeld technisch, organisatorisch und wirtschaftlich fundiert unterstützen kann."
+      ctaSubtext="Wir klären gern, wie SKM Sie bei der technischen Bewertung von Beständen, Risiken und Investitionsentscheidungen im Corporate Real Estate fundiert unterstützen kann."
       ctaButtonLabel="Erstgespräch anfragen"
     />
   );

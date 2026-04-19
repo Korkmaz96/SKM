@@ -21,7 +21,7 @@ export const navigation = {
       children: [
         { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
         { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
-        { label: "Corporate Real Estate & Facility Management", href: "/leistungen/corporate-real-estate-facility-management" },
+        { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/corporate-real-estate-facility-management" },
       ],
     },
     { label: "Unternehmen", href: "/unternehmen" },
@@ -31,7 +31,7 @@ export const navigation = {
     leistungen: [
       { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
       { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
-      { label: "Corporate Real Estate & Facility Management", href: "/leistungen/corporate-real-estate-facility-management" },
+      { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/corporate-real-estate-facility-management" },
     ],
     unternehmen: [
       { label: "Über uns", href: "/unternehmen" },
@@ -81,7 +81,7 @@ export const services = {
     {
       id: "corporate-real-estate-facility-management",
       number: "",
-      title: "Corporate Real Estate & Facility Management",
+      title: "Technische Immobilienbewertung & Corporate Real Estate",
       shortDescription: "Prozess- und Organisationsberatung an der Schnittstelle von Technik und Management.",
       href: "/leistungen/corporate-real-estate-facility-management",
       items: [
