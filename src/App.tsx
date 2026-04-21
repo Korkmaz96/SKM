@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Leistungen from "./pages/Leistungen";
 import Sachverstaendigenleistungen from "./pages/Sachverstaendigenleistungen";
 import BetreiberverantwortungOrganisation from "./pages/BetreiberverantwortungOrganisation";
-import CorporateRealEstateLeanFM from "./pages/CorporateRealEstateLeanFM";
+import TechnischeImmobilienbewertung from "./pages/TechnischeImmobilienbewertung";
 import Referenzen from "./pages/Referenzen";
 import Unternehmen from "./pages/Unternehmen";
 import Kontakt from "./pages/Kontakt";
@@ -30,14 +30,10 @@ const App = () => (
           <Route path="/leistungen" element={<Leistungen />} />
           <Route path="/leistungen/sachverstaendigenleistungen" element={<Sachverstaendigenleistungen />} />
           <Route path="/leistungen/betreiberverantwortung-technischer-brandschutz" element={<BetreiberverantwortungOrganisation />} />
-          <Route path="/leistungen/corporate-real-estate-facility-management" element={<CorporateRealEstateLeanFM />} />
+          <Route path="/leistungen/technische-immobilienbewertung" element={<TechnischeImmobilienbewertung />} />
           <Route
             path="/leistungen/betreiberverantwortung-organisation"
             element={<Navigate to="/leistungen/betreiberverantwortung-technischer-brandschutz" replace />}
-          />
-          <Route
-            path="/leistungen/corporate-real-estate-lean-fm"
-            element={<Navigate to="/leistungen/corporate-real-estate-facility-management" replace />}
           />
           <Route path="/referenzen" element={<Referenzen />} />
           <Route path="/unternehmen" element={<Unternehmen />} />
