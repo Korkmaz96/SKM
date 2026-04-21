@@ -9,15 +9,34 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { kontakt, company } from "@/content/content";
 import { useToast } from "@/hooks/use-toast";
 
+const FORM_TAXI_ENDPOINT = "https://form.taxi/s/igjhmi25";
+
+const initialFormData = {
+  name: "",
+  email: "",
+  message: "",
+  dsgvoAccepted: false,
+  _gotcha: "",
+};
+
+const getSubmissionErrorMessage = async (response: Response) => {
+  try {
+    const data = await response.json();
+
+    if (typeof data?.message === "string" && data.message.trim()) {
+      return data.message;
+    }
+  } catch {
+    // Fall back to the generic frontend message if Form.taxi does not return JSON.
+  }
+
+  return kontakt.form.errorMessage;
+};
+
 const Kontakt = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    dsgvoAccepted: false,
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateForm = () => {
@@ -45,31 +64,47 @@ const Kontakt = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
-    // [FEHLT] - API-Endpoint für Formular-Übermittlung
-    // Mock submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Nachricht gesendet",
-      description: kontakt.form.successMessage,
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      dsgvoAccepted: false,
-    });
-    setIsSubmitting(false);
+
+    const form = e.currentTarget;
+    const submission = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        headers: {
+          Accept: "application/json",
+        },
+        body: submission,
+      });
+
+      if (!response.ok) {
+        throw new Error(await getSubmissionErrorMessage(response));
+      }
+
+      toast({
+        title: "Nachricht gesendet",
+        description: kontakt.form.successMessage,
+      });
+
+      setFormData(initialFormData);
+      setErrors({});
+    } catch (error) {
+      toast({
+        title: "Versand fehlgeschlagen",
+        description: error instanceof Error ? error.message : kontakt.form.errorMessage,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (
@@ -157,7 +192,12 @@ const Kontakt = () => {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  action={FORM_TAXI_ENDPOINT}
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
                   <div>
                     <Label htmlFor="name" className="text-minimal text-muted-foreground">
                       {kontakt.form.nameLabel} *
@@ -225,6 +265,11 @@ const Kontakt = () => {
                   </div>
                   
                   <div className="flex items-start gap-3">
+                    <input
+                      type="hidden"
+                      name="dsgvoAccepted"
+                      value={formData.dsgvoAccepted ? "true" : "false"}
+                    />
                     <Checkbox
                       id="dsgvo"
                       checked={formData.dsgvoAccepted}
@@ -248,9 +293,19 @@ const Kontakt = () => {
                       )}
                     </div>
                   </div>
-                  
-                  {/* [FEHLT] - Spam-Schutz (z.B. reCAPTCHA oder Honeypot) */}
-                  
+
+                  {/* Honeypot for Form.taxi; captcha can be enabled later in the Form.taxi panel. */}
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    value={formData._gotcha}
+                    onChange={handleInputChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
+
                   <Button
                     type="submit"
                     disabled={isSubmitting}

@@ -102,12 +102,16 @@ const Unternehmen = () => {
                     <h4 className="mb-1 break-words text-foreground font-medium">
                       {station.role}
                     </h4>
-                    <p className="mb-2 break-words text-sm text-muted-foreground">
-                      {station.company}
-                    </p>
-                    <p className="break-words text-sm leading-relaxed text-muted-foreground">
-                      {station.description}
-                    </p>
+                    {station.company && (
+                      <p className="mb-2 break-words text-sm text-muted-foreground">
+                        {station.company}
+                      </p>
+                    )}
+                    {station.description && (
+                      <p className="break-words text-sm leading-relaxed text-muted-foreground">
+                        {station.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
