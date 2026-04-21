@@ -21,7 +21,7 @@ export const navigation = {
       children: [
         { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
         { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
-        { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/corporate-real-estate-facility-management" },
+        { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/technische-immobilienbewertung" },
       ],
     },
     { label: "Unternehmen", href: "/unternehmen" },
@@ -31,7 +31,7 @@ export const navigation = {
     leistungen: [
       { label: "Sachverständigenleistungen", href: "/leistungen/sachverstaendigenleistungen" },
       { label: "Betreiberverantwortung & technischer Brandschutz", href: "/leistungen/betreiberverantwortung-technischer-brandschutz" },
-      { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/corporate-real-estate-facility-management" },
+      { label: "Technische Immobilienbewertung & Corporate Real Estate", href: "/leistungen/technische-immobilienbewertung" },
     ],
     unternehmen: [
       { label: "Über uns", href: "/unternehmen" },
@@ -48,7 +48,7 @@ export const services = {
   overview: {
     headline: "Leistungen",
     subheadline: "Unsere Kernkompetenzen",
-    intro: "Risiken minimieren und Werte sichern. SKM unterstützt Unternehmen mit unabhängigen Analysen, strukturiertem Brandschutz und Lean-Management-Methoden bei der zukunftssicheren Ausrichtung ihrer Immobilien.",
+    intro: "Risiken minimieren und Werte sichern. SKM unterstützt Unternehmen mit unabhängigen Analysen, strukturiertem Brandschutz und technischer Immobilienbewertung bei der zukunftssicheren Ausrichtung ihrer Immobilien.",
   },
   clusters: [
     {
@@ -79,11 +79,11 @@ export const services = {
       ],
     },
     {
-      id: "corporate-real-estate-facility-management",
+      id: "technische-immobilienbewertung",
       number: "",
       title: "Technische Immobilienbewertung & Corporate Real Estate",
       shortDescription: "Prozess- und Organisationsberatung an der Schnittstelle von Technik und Management.",
-      href: "/leistungen/corporate-real-estate-facility-management",
+      href: "/leistungen/technische-immobilienbewertung",
       items: [
         "Prozess- und Organisationsanalysen im Corporate Real Estate",
         "Lifecycle- und Wirtschaftlichkeitsbetrachtungen",

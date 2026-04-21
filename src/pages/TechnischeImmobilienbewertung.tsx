@@ -2,7 +2,7 @@ import heroCreFm from "@/assets/hero-cre-fm.png";
 import introCreFm from "@/assets/intro-cre-fm1.png";
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 
-const CorporateRealEstateLeanFM = () => {
+const TechnischeImmobilienbewertung = () => {
   return (
     <ServiceDetailPage
       number="03"
@@ -79,4 +79,4 @@ const CorporateRealEstateLeanFM = () => {
   );
 };
 
-export default CorporateRealEstateLeanFM;
+export default TechnischeImmobilienbewertung;
