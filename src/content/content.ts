@@ -85,7 +85,7 @@ export const services = {
       shortDescription: "Prozess- und Organisationsberatung an der Schnittstelle von Technik und Management.",
       href: "/leistungen/corporate-real-estate-facility-management",
       items: [
-        "Prozess- und Organisationsanalysen im CRE/FM",
+        "Prozess- und Organisationsanalysen im Corporate Real Estate",
         "Lifecycle- und Wirtschaftlichkeitsbetrachtungen",
         "Schnittstelle Technik - Organisation - Management",
         "Entwicklung pragmatischer, umsetzbarer Konzepte",
@@ -280,7 +280,7 @@ export const legal = {
     content: `Impressum
 
 Sefa Korkmaz
-Beratung und Sachverständigenleistungen im Bereich Corporate Real Estate, Facility Management und technischer Brandschutz.
+Beratung und Sachverständigenleistungen im Bereich Corporate Real Estate und technischer Brandschutz.
 Burgfelderstraße.2
 70567 Stuttgart
 

@@ -6,12 +6,12 @@ const CorporateRealEstateLeanFM = () => {
   return (
     <ServiceDetailPage
       number="03"
-      title="Corporate Real Estate & Facility Management | SKM Management"
+      title="Technische Immobilienbewertung & Corporate Real Estate | SKM Management"
       eyebrow="TECHNISCHE IMMOBILIENBEWERTUNG & CORPORATE REAL ESTATE"
       heroHeadline="Technische Immobilienentscheidungen erfordern belastbare Grundlagen."
       heroSubline="SKM Management verbindet technische Expertise mit Erfahrung im Corporate Real Estate und schafft klare Bewertungen für Bestand, Risiken und Investitionen."
       heroImage={heroCreFm}
-      heroImageAlt="Technische Steuerung von Immobilienprozessen im Corporate Real Estate und Facility Management"
+      heroImageAlt="Technische Steuerung von Immobilienprozessen im Corporate Real Estate"
       breakStatement="Bestand steuern. Maßnahmen priorisieren. Schnittstellen zwischen Technik, Betrieb und Management belastbar führen."
       breakSubtext="SKM übersetzt technische Handlungsbedarfe, Dienstleistersteuerung und Modernisierungsfragen in tragfähige Prozesse und klare Entscheidungslogiken."
       introHeadline="Corporate Real Estate entfaltet seinen Wert nicht durch reine Verwaltung, sondern durch klare technische Steuerung."
@@ -25,7 +25,6 @@ const CorporateRealEstateLeanFM = () => {
       trustItems={[
         // "Seit September 2023: Technical Property Manager / Corporate Real Estate Management bei VECTOR Informatik.",
         "Praxis in der Steuerung technischer Immobilienprozesse für eigengenutzte sowie angemietete und vermietete Unternehmensstandorte.",
-        // "M.Sc. Wirtschaftsingenieurwesen mit Fachrichtung Facility Management sowie weiterführende FM-Qualifikationen bis hin zum zertifizierten Facility Manager.",
       ]}
       tabs={[
         {
@@ -41,7 +40,7 @@ const CorporateRealEstateLeanFM = () => {
         {
           label: "Schnittstellen",
           content:
-            "Zwischen Eigentümer, Facility Management, Nutzern und externen Dienstleistern entstehen häufig Reibungsverluste. SKM ordnet diese Schnittstellen, klärt Verantwortlichkeiten und schafft eine Form der technischen Steuerung, die intern anschlussfähig und operativ praktikabel bleibt.",
+            "Zwischen Eigentümer, internem Management, Nutzern und externen Dienstleistern entstehen häufig Reibungsverluste, die technische Steuerung erschweren. SKM klärt Verantwortlichkeiten, ordnet Zuständigkeiten und schafft belastbare Steuerungsstrukturen, die intern anschlussfähig und in der Praxis des Bestands tragfähig sind.",
         },
         {
           label: "Ausschreibung",
