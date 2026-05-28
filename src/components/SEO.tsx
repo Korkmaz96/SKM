@@ -49,7 +49,7 @@ const SEO = () => {
 
   useEffect(() => {
     const route = findSeoRoute(location.pathname);
-    const robots = route.path === "/404" ? "noindex, follow" : "index, follow";
+    const robots = route.path === "/404" || route.indexable === false ? "noindex, follow" : "index, follow";
 
     document.title = route.title;
     upsertCanonical(route.url);
