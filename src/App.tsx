@@ -8,6 +8,7 @@ import Leistungen from "./pages/Leistungen";
 import Sachverstaendigenleistungen from "./pages/Sachverstaendigenleistungen";
 import BetreiberverantwortungOrganisation from "./pages/BetreiberverantwortungOrganisation";
 import TechnischeImmobilienbewertung from "./pages/TechnischeImmobilienbewertung";
+import AuditsDueDiligence from "./pages/AuditsDueDiligence";
 import Referenzen from "./pages/Referenzen";
 import Unternehmen from "./pages/Unternehmen";
 import Kontakt from "./pages/Kontakt";
@@ -15,6 +16,7 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import SEO from "./components/SEO";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SEO />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -31,6 +34,7 @@ const App = () => (
           <Route path="/leistungen/sachverstaendigenleistungen" element={<Sachverstaendigenleistungen />} />
           <Route path="/leistungen/betreiberverantwortung-technischer-brandschutz" element={<BetreiberverantwortungOrganisation />} />
           <Route path="/leistungen/technische-immobilienbewertung" element={<TechnischeImmobilienbewertung />} />
+          <Route path="/leistungen/technische-audits-due-diligence" element={<AuditsDueDiligence />} />
           <Route
             path="/leistungen/betreiberverantwortung-organisation"
             element={<Navigate to="/leistungen/betreiberverantwortung-technischer-brandschutz" replace />}

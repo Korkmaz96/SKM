@@ -7,8 +7,9 @@ import { services } from "@/content/content";
 import services01 from "@/assets/services-01.jpg";
 import services02 from "@/assets/services-02.jpg";
 import services03 from "@/assets/services-03.jpg";
+import services04 from "@/assets/services-04.jpg";
 
-const slideImages = [services01, services02, services03];
+const slideImages = [services01, services02, services03, services04];
 
 const Leistungen = () => {
   return (
