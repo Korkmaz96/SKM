@@ -6,6 +6,7 @@ export interface SeoRoute {
   changefreq: "weekly" | "monthly" | "yearly";
   priority: string;
   lastmod: string;
+  indexable?: boolean;
 }
 
 export const siteUrl = "https://skm-management.de";
@@ -85,6 +86,7 @@ export const seoRoutes: SeoRoute[] = [
     changefreq: "monthly",
     priority: "0.7",
     lastmod: defaultLastModified,
+    indexable: false,
   },
   {
     path: "/unternehmen",

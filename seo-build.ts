@@ -137,6 +137,7 @@ const renderSeoHtml = (html: string, route: SeoRoute, robots = "index, follow") 
 const createSitemap = () => `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${seoRoutes
+  .filter((route) => route.indexable !== false)
   .map(
     (route) => `  <url>
     <loc>${escapeXml(route.url)}</loc>
@@ -163,7 +164,8 @@ export const generateSeoFiles = () => ({
     const baseHtml = fs.readFileSync(indexPath, "utf8");
 
     seoRoutes.forEach((route) => {
-      const html = renderSeoHtml(baseHtml, route);
+      const robots = route.indexable === false ? "noindex, follow" : "index, follow";
+      const html = renderSeoHtml(baseHtml, route, robots);
       const routeIndexPath =
         route.path === "/"
           ? indexPath
