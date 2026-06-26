@@ -210,9 +210,9 @@ export const unternehmen = {
       },
       {
         year: "Seit 2026",
-        role: "Sachverständiger für Bauschadenbewertung (DEKRA) (im Zertifizierungsprozess)",
-        company: "Spezialisierung auf Betonbau, Stahlbeton und Mauerwerksbau",
-        description: "Derzeit im strukturierten Qualifizierungsprozess mit Fokus auf technische Bewertung, Schadensanalyse sowie die fachliche Einordnung von Bau- und Materialschäden.",
+        role: "Sachverständiger DEKRA zertifiziert",
+        company: "Sachverständiger für Bauschadenbewertung",
+        description: "",
       },
       {
         year: "2026 - 2027",

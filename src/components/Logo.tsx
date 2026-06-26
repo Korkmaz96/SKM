@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { company } from "@/content/content";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/Logo2.svg";
+import logoAsset from "@/assets/skm-logo.jpg";
 
 interface LogoProps {
   className?: string;
@@ -41,15 +41,15 @@ const Logo = ({
     <>
       <div
         className={cn(
-          "shrink-0",
+          "shrink-0 aspect-square overflow-hidden rounded-lg ring-1 ring-black/5",
           sizeClasses[size],
-          boxed && "box-border rounded-lg bg-background p-1.5 sm:p-2",
+          boxed && "box-border bg-background p-1.5 sm:p-2",
         )}
       >
         <img
           src={logoAsset}
           alt={showName ? "" : `${company.name} Logo`}
-          className={cn("h-full w-auto object-contain", imageClassName)}
+          className={cn("h-full w-full object-cover", imageClassName)}
         />
       </div>
 
